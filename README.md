@@ -29,6 +29,8 @@ AXRE Studio 是由 **阿向菌 AXBRO** 制作的 Windows 多游戏 ReShade 管�
 
 公开版采用最小合规效果库，不包含作者自用的完整 Shader、Texture 与 Preset。其他效果请根据原作者许可从可信上游自行安装。
 
+需要更多效果时，可前往 [ReShade 官方 Shader 仓库](https://github.com/crosire/reshade-shaders) 下载，或使用 ReShade 官方安装程序提供的效果包下载功能。不同效果可能采用不同许可证，安装和再分发前请阅读对应作者的许可与说明。
+
 ## 快速开始
 
 1. 从 Releases 下载最新 Beta 安装包并核对 SHA-256。
@@ -37,6 +39,8 @@ AXRE Studio 是由 **阿向菌 AXBRO** 制作的 Windows 多游戏 ReShade 管�
 4. 首次使用先点击“应用默认配置”。
 5. 开启“自动注入”，保持 AXRE 在后台等待，再用游戏原本的启动方式进入游戏。
 6. 游戏内按 ReShade 默认快捷键打开界面；具体快捷键以当前配置为准。
+
+部分游戏安装在受保护目录，或者游戏、启动器本身以管理员身份运行时，AXRE 也可能需要“以管理员身份运行”，否则可能无法读取目录、写入配置或完成注入。只在确有需要时启用管理员权限，并确保 AXRE 与目标游戏的权限级别一致。
 
 完整说明见 [安装指南](docs/INSTALL.md) 和 [使用教程](docs/USER-GUIDE.md)。
 
