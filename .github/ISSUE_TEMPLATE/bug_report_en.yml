@@ -1,0 +1,39 @@
+name: Bug report (English)
+description: Report a reproducible AXRE Beta problem.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Remove account details, personal paths, UID values, tokens, and unrelated logs before submitting."
+  - type: input
+    id: version
+    attributes:
+      label: AXRE version
+      placeholder: 0.1.0-beta.41
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows version, game, graphics API, and launch method.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized logs or screenshots
+      description: Do not upload copyrighted resources, credentials, UID values, or private paths.

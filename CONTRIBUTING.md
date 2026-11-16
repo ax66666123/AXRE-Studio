@@ -1,5 +1,7 @@
 # 参与反馈
 
+[简体中文](CONTRIBUTING.md) | [English](CONTRIBUTING_EN.md)
+
 当前仓库主要用于 Beta 发布说明、教程和问题追踪，不接收 AXRE 核心源码 Pull Request。
 
 欢迎提交：

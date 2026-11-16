@@ -1,5 +1,7 @@
 # 第三方组件、来源与许可
 
+[简体中文](THIRD-PARTY-NOTICES.md) | [English](THIRD-PARTY-NOTICES_EN.md)
+
 AXRE Studio 与 ReShade、NVIDIA 及任何游戏厂商不存在隶属、赞助或官方认可关系。第三方名称和商标归各自权利人所有。
 
 ## 随发布包提供的组件

@@ -1,5 +1,7 @@
 # AXRE Studio Beta
 
+[简体中文](README.md) | [English](README_EN.md)
+
 > 让游戏调色、渲染与截图变得简单。
 
 AXRE Studio 是由 **阿向菌 AXBRO** 制作的 Windows 多游戏 ReShade 管理工具。它把游戏管理、ReShade 配置、效果学习、插件说明、截图图库和常见问题集中在一个中文界面中，主要面向游戏截图、虚拟摄影和画面调色用户。

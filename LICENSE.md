@@ -1,5 +1,7 @@
 # AXRE Studio 许可说明
 
+[简体中文](LICENSE.md) | [English](LICENSE_EN.md)
+
 Copyright © 2026 阿向菌 AXBRO. All rights reserved.
 
 AXRE Studio 的原创界面、程序逻辑、品牌素材、文档及未另行标注的内容保留所有权利。

@@ -1,5 +1,7 @@
 # 安装指南
 
+[简体中文](INSTALL.md) | [English](INSTALL_EN.md)
+
 ## 系统要求
 
 - Windows 10 1809 或更高版本，推荐 Windows 11；
