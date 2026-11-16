@@ -6,6 +6,8 @@
 
 AXRE Studio is a Windows multi-game ReShade manager created by **AXiangJun AXBRO**. It brings game management, ReShade configuration, effect learning, add-on documentation, screenshot galleries, and troubleshooting into one interface for game photography and visual customization.
 
+> Technical note: AXRE is built around the ReShade injector mechanism. It externally loads ReShade into a selected game and then manages games, configurations, resource paths, add-ons, and screenshots. AXRE is not a standalone graphics-injection core and is not an official ReShade product. The ReShade project and its authors do not endorse, warrant, or provide support for AXRE.
+
 > AXRE is currently in Beta. Back up important presets and screenshots, and use it only in single-player games or environments where graphics injection tools are explicitly allowed.
 
 ![AXRE Game Library](assets/screenshots/01-game-library.png)
@@ -46,6 +48,7 @@ See the [English installation guide](docs/INSTALL_EN.md) and [English user guide
 ## Safety
 
 - AXRE and ReShade are not affiliated with or endorsed by any game publisher.
+- AXRE uses injection and runtime components based on the ReShade open-source project; those components remain subject to their original BSD 3-Clause license.
 - Graphics injection may be blocked by anti-cheat or online protection systems.
 - Do not use AXRE in competitive, ranked, or explicitly prohibited online environments.
 - Game updates may temporarily break injection, depth access, effects, or add-ons.
