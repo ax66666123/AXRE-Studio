@@ -1,0 +1,57 @@
+name: Bug 反馈
+description: 报告可以稳定复现的 AXRE Beta 问题
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: 请先确认日志和截图已经删除用户名、账号、UID、令牌及其他隐私信息。
+  - type: input
+    id: version
+    attributes:
+      label: AXRE 版本
+      placeholder: 例如 0.1.0 Beta
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: 游戏与版本
+      placeholder: 游戏名称、正式服或测试服
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类型
+      options:
+        - 安装或启动
+        - 游戏识别
+        - ReShade 注入
+        - 配置或预设
+        - 效果或双语参数
+        - 插件
+        - 截图图库
+        - 调试场景
+        - 窗口比例
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: 按顺序说明做了什么、看到了什么。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 已脱敏日志或截图
+      description: 可拖入文件；不要上传账号、UID、个人路径或受版权保护的资源。

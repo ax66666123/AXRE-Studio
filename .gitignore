@@ -1,0 +1,19 @@
+# This repository is documentation and release metadata only.
+*.exe
+*.dll
+*.pdb
+*.zip
+*.7z
+*.rar
+*.pfx
+*.cer
+*.key
+*.log
+*.ini
+*.json
+bin/
+obj/
+output/
+payload*/
+releases/*
+!releases/README.md

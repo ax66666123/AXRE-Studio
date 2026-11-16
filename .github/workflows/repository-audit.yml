@@ -1,0 +1,35 @@
+name: Repository audit
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject binaries, secrets and private build artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          blocked='\.(exe|dll|pdb|pfx|cer|key|zip|7z|rar)$'
+          if git ls-files | grep -Eiq "$blocked"; then
+            echo "Blocked binary, certificate or archive found in Git history."
+            git ls-files | grep -Ei "$blocked"
+            exit 1
+          fi
+          if git grep -nEi 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|AXRE_SIGN_PFX_PASSWORD|[A-Z]:\\Users\\' -- . ':!*.md'; then
+            echo "Potential private key, password variable or personal absolute path found."
+            exit 1
+          fi
+          if git grep -nEi 'iMMERSE|RTGI|METEOR|nvngx_.*\.dll|(^|/)sl\..*\.dll' -- . ':!README.md' ':!THIRD-PARTY-NOTICES.md' ':!docs/RELEASE-AUDIT.md'; then
+            echo "Restricted component reference found outside approved documentation."
+            exit 1
+          fi
+          oversized=$(find . -type f -not -path './.git/*' -size +20M -print)
+          if [[ -n "$oversized" ]]; then
+            echo "Files larger than 20 MB must be uploaded as audited Release assets:"
+            echo "$oversized"
+            exit 1
+          fi
