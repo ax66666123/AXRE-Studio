@@ -19,11 +19,11 @@ jobs:
             git ls-files | grep -Ei "$blocked"
             exit 1
           fi
-          if git grep -nEi 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|AXRE_SIGN_PFX_PASSWORD|[A-Z]:\\Users\\' -- . ':!*.md'; then
+          if git grep -nEi 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|AXRE_SIGN_PFX_PASSWORD|[A-Z]:\\Users\\' -- . ':!*.md' ':!.github/workflows/repository-audit.yml'; then
             echo "Potential private key, password variable or personal absolute path found."
             exit 1
           fi
-          if git grep -nEi 'iMMERSE|RTGI|METEOR|nvngx_.*\.dll|(^|/)sl\..*\.dll' -- . ':!README.md' ':!THIRD-PARTY-NOTICES.md' ':!docs/RELEASE-AUDIT.md'; then
+          if git grep -nEi 'iMMERSE|RTGI|METEOR|nvngx_.*\.dll|(^|/)sl\..*\.dll' -- . ':!README.md' ':!THIRD-PARTY-NOTICES.md' ':!docs/RELEASE-AUDIT.md' ':!.github/workflows/repository-audit.yml'; then
             echo "Restricted component reference found outside approved documentation."
             exit 1
           fi
